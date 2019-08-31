@@ -1,0 +1,131 @@
+body {
+	background: #f08d71;
+	font-family: 'Courgette', cursive;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	font-family: 'Cinzel', serif;
+	text-align: center;
+	font-size: 3rem;
+	color: white;
+	background: #6200ee; 
+	margin: 0;
+	margin-bottom: 35px;
+	padding: 10px 0;
+	border-bottom-left-radius: 50%;          
+	border-bottom-right-radius: 50%;
+	border-bottom: 2px dashed white;          
+}
+
+
+h2 {
+	margin-left: 20px;
+}
+.selected {
+	color:  #f8ddfd;
+}
+
+.checked {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+button.add {
+	font-family: 'Cinzel', serif;
+	border-radius: 5px;
+	height: 30px;
+	max-width: 70px;
+	width: 20%;
+	margin-left: 20px; 
+	background: #6200ee;
+	color: #ffffff;
+	border: 0;
+	transition: box-shadow 400ms;
+	box-shadow: 0 1px 2px #00000A;
+}
+
+button.add:hover {
+	background: #6200ff;
+	box-shadow: 0 2px 3px #00000F;
+}
+
+input {
+	border-radius: 30px;
+	border-top: 2px #79abfc solid;
+	border-bottom: 2px #79f77d solid;
+	border-right: 2px #79f77d solid;
+	border-left: 2px #79abfc solid;
+	height: 25px;
+	width: 40%;
+	padding-left: 10px;
+}
+
+li {
+	font-size: 1.2rem;
+	line-height: 30px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+li p {
+	display: inline-block;
+	width: 30%;
+	padding-left: 0;
+	color: white;
+
+}
+#sample:nth-of-type(1) {
+	display: none;
+}
+
+li button {
+	border-radius: 50%;
+	margin-right: 10px;
+	height: 35px;
+	width: 35px;
+}
+
+li button + button + button {
+	border-radius:10px;
+	margin-left: 30%;
+}
+
+li button:hover {
+	background: black;
+	color: white;
+}
+
+li:nth-of-type(odd) {
+	background: #490091; 
+	transition: background 500ms;
+}
+li:nth-of-type(odd):hover {
+	background: #580e99;  
+}
+
+li:nth-of-type(even) {
+	background: #34b3b1; 
+	transition: background 500ms;
+}
+
+li:nth-of-type(even):hover {
+	background: #00c2bf; 
+}
+
+
+.container {
+	width: 80%;
+	align-self: center;
+}
+
+h2,ol {
+	margin-left: 0;
+	padding-left: 0;
+}
