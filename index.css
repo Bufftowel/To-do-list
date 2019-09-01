@@ -139,8 +139,10 @@ h2,ol {
 	padding-left: 0;
 }
 
-@media (max-width: 512) {
+@media (max-width: 512px) {
 	#changeTheme {
-		display:block;
+		display: block;
+		float: none;
+		margin: 20px 0;
 	}
 }
