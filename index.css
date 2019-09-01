@@ -17,7 +17,8 @@ h1 {
 	padding: 10px 0;
 	border-bottom-left-radius: 50%;          
 	border-bottom-right-radius: 50%;
-	border-bottom: 2px dashed white;          
+	border-bottom: 2px dashed white; 
+	transition: all 600ms;         
 }
 
 
@@ -43,9 +44,9 @@ button.add, #changeTheme {
 	background: #6200ee;
 	color: #ffffff;
 	border: 0;
-	transition: box-shadow 400ms;
 	box-shadow: 0 1px 2px #00000A;
 	outline: none;
+	transition: box-shadow 400ms,border-radius 600ms;
 }
 
 #changeTheme {
@@ -56,7 +57,7 @@ button.add, #changeTheme {
 
 button.add:hover, #changeTheme:hover {
 	background: #6200ff;
-	box-shadow: 0 2px 3px #00000F;
+	box-shadow: 1px 2px 3px #00000F;
 }
 
 input {
@@ -70,6 +71,7 @@ input {
 	min-width: 140px;
 	padding-left: 10px;
 	outline: none;
+	transition: background 600ms, border-radius 600ms, margin 600ms, padding 600ms; 
 }
 
 li {
@@ -81,6 +83,7 @@ li {
 	align-items: center;
 	padding-left: 10px;
 	margin-bottom: 10px;
+	transition: all 600ms;  
 }
 
 li p {
@@ -88,10 +91,14 @@ li p {
 	width: 30%;
 	padding-left: 0;
 	color: white;
-
 }
+
 #sample:nth-of-type(1) {
 	display: none;
+}
+
+h2 + span {
+	transition: all 600ms;
 }
 
 li button {
@@ -99,11 +106,12 @@ li button {
 	margin-right: 10px;
 	height: 35px;
 	width: 35px;
+	transition: all 600ms;
 }
 
 li button + button + button {
 	border-radius:10px;
-	margin-left: 30%;
+	margin-left: 27%;
 }
 
 li button:hover {
@@ -113,7 +121,6 @@ li button:hover {
 
 li:nth-of-type(odd) {
 	background: #490091; 
-	transition: background 500ms;
 }
 li:nth-of-type(odd):hover {
 	background: #580e99;  
@@ -121,7 +128,6 @@ li:nth-of-type(odd):hover {
 
 li:nth-of-type(even) {
 	background: #34b3b1; 
-	transition: background 500ms;
 }
 
 li:nth-of-type(even):hover {
@@ -130,6 +136,7 @@ li:nth-of-type(even):hover {
 
 
 .container {
+	transition: none;	
 	width: 80%;
 	align-self: center;
 }
