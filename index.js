@@ -1,6 +1,8 @@
 let sample = document.getElementById("sample"), s;
 let ol = document.querySelector("ol");
 let list = [...document.querySelectorAll("li")],cnt = 0;
+let css = document.querySelector("link");
+let hasPrimaryTheme = true;
 
 function deleteNode(obj) {
 	let id = obj.id;
@@ -38,6 +40,13 @@ for(let i = 1; i < list.length; ++i) {
 		deleteNode(list[i]);
 	});
 }
+
+document.getElementById("changeTheme").addEventListener("click",function(){
+	if(hasPrimaryTheme)
+		css.href = "css2.css", hasPrimaryTheme = false;
+	else css.href="index.css", hasPrimaryTheme = true;
+});
+
 let input = document.querySelector("input");
 document.querySelector(".add").addEventListener("click",function(){
 	let x = sample.cloneNode(1);     // if x is declared globaly, then event functions will use it as it is,
