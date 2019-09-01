@@ -40,7 +40,7 @@ for(let i = 1; i < list.length; ++i) {
 }
 let input = document.querySelector("input");
 document.querySelector(".add").addEventListener("click",function(){
-	let x = sample.cloneNode(1);     // if x is declared globaly, then event functions will use is
+	let x = sample.cloneNode(1);     // if x is declared globaly, then event functions will use it as it is,
 	if(input.value=="")	{           // hence using last value of x, rather than the one intended.
 		alert("Enter a valid task!");
 		return;
