@@ -2,7 +2,7 @@ let sample = document.getElementById("sample"), s;
 let ol = document.querySelector("ol");
 let list = [...document.querySelectorAll("li")],cnt = 0;
 let css = document.querySelector("link");
-let hasPrimaryTheme = true;
+let hasPrimaryTheme = false;
 
 function deleteNode(obj) {
 	let id = obj.id;
