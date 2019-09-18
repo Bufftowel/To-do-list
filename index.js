@@ -5,8 +5,8 @@ let css = document.querySelector("link");
 let hasPrimaryTheme = false;
 
 function deleteNode(obj) {
-	let id = obj.id;
-	for(let i = Number(id[2]) + 1; i<=cnt; i++) {
+	let id = (obj.id).slice(2);
+	for(let i = Number(id) + 1; i<=cnt; i++) {
 		list[i-1].childNodes[0].textContent = list[i].textContent;
 	}
 	ol.removeChild(list[cnt]);
