@@ -5,7 +5,7 @@ let css = document.querySelector("link");
 let hasPrimaryTheme = false;
 
 function deleteNode(obj) {
-	let id = (obj.id).slice(2);
+	let id = obj.id.slice(2);
 	for(let i = Number(id) + 1; i<=cnt; i++) {
 		list[i-1].childNodes[0].textContent = list[i].textContent;
 	}
@@ -71,7 +71,7 @@ document.querySelector(".add").addEventListener("click",function(){
 	x.childNodes[3].addEventListener("click",function(){
 		deleteNode(x);
 	});
-	let y = document.getElementById("id" + (Number(x.id[2])-1));
+	let y = document.getElementById("id" + (Number(x.id.slice(2))-1));
 	x.childNodes[1].addEventListener("click",function(){
 		if(cnt<=1) return;
 		s = x.textContent;
