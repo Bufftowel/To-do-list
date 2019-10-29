@@ -3,6 +3,7 @@ let ol = document.querySelector("ol");
 let list = [...document.querySelectorAll("li")],cnt = 0;
 let css = document.querySelector("link");
 let hasPrimaryTheme = false;
+let input = document.querySelector("input");
 
 function deleteNode(obj) {
 	let id = obj.id.slice(2);
@@ -47,13 +48,13 @@ document.getElementById("changeTheme").addEventListener("click",function(){
 	else css.href="index.css", hasPrimaryTheme = true;
 });
 
-let input = document.querySelector("input");
-document.querySelector(".add").addEventListener("click",function(){
-	let x = sample.cloneNode(1);     // if x is declared globaly, then event functions will use it as it is,
+function add() {
+								     // if x is declared globaly, then event functions will use it as it is,
 	if(input.value=="")	{           // hence using last value of x, rather than the one intended.
 		alert("Enter a valid task!");
 		return;
 	}
+	let x = sample.cloneNode(1); 
 	x.childNodes[0].textContent = input.value;
 	cnt++;
 	x.id = "id" + cnt;
@@ -83,4 +84,10 @@ document.querySelector(".add").addEventListener("click",function(){
 		y.childNodes[0].textContent = x.textContent;
 		x.childNodes[0].textContent = s;
 	});
+}
+
+document.querySelector(".add").addEventListener("click",add);
+
+input.addEventListener("keypress",function(event){
+	if(event.keyCode == 13) add();
 });
